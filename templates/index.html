@@ -12,6 +12,29 @@
         >
             Try this for the time
         </button>
-        <div id="firstId">Click button for time to appear HERE!</div>
+        <form hx-put="/contact/1" hx-target="this" hx-swap="outerHTML">
+           
+          </form>
+        <div id="firstId">Click button for TIME info</div>
+
+        <button 
+        hx-get="/#compName"
+        hx-trigger="click"
+        hx-target="#compName"
+        >
+        </button>
+
+        <!-- //this is the line that works!!!: -->
+        <form hx-get='/name' hx-put="{{lname}}" hx-target="this" hx-swap="outerHTML">
+
+        <form id="#compName" hx-target="this" hx-swap="outerHTML">Please enter your name:
+            <label for="fname">{{fname}}</label>       
+            <input type="text" name="fname" value="">
+            <label for="lname">{{lname}}</label>
+            <input type="text" name="lname" value="">
+        
+            <button class='btn'>format name</button>
+        </form>
+        <div id="#compName">Click button to format name</div>
     </body>
 </html>

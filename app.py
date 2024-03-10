@@ -11,3 +11,7 @@ def index():
 def timeNow():
     currentTime = datetime.datetime.now()
     return render_template('formatTime.html', currentTime=currentTime)
+
+@app.route('/name')
+def formatName():
+    return render_template('nameTemplate.html', fname='Zev', lname='Cohen')
