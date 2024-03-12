@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import datetime
 
 app = Flask(__name__)
@@ -12,6 +12,8 @@ def timeNow():
     currentTime = datetime.datetime.now()
     return render_template('formatTime.html', currentTime=currentTime)
 
-@app.route('/name')
+@app.route('/name', methods=["POST"])
 def formatName():
-    return render_template('nameTemplate.html', fname='Zev', lname='Cohen')
+    fname = request.form.get('fname')
+    lname = request.form.get('lname')
+    return render_template('nameTemplate.html', fname=fname, lname=lname)

@@ -25,12 +25,12 @@
         </button>
 
         <!-- //this is the line that works!!!: -->
-        <form hx-get='/name' hx-target="this" hx-swap="outerHTML">
+        <form hx-post='/name' hx-target="this" hx-swap="outerHTML">
 
         <form id="#compName" hx-target="this" hx-swap="outerHTML">Please enter your name:
-            <label for="fname">{{fname}}</label>       
+            <label for="fname"></label>       
             <input type="text" name="fname" value="">
-            <label for="lname">{{lname}}</label>
+            <label for="lname"></label>
             <input type="text" name="lname" value="">
         
             <button class='btn'>format name</button>
