@@ -30,7 +30,7 @@ def styleCitation():
     elif style == 'option2':
         return render_template('apaStyle.html', fname=fname, lname=lname, title=title, date=date)
     else:
-        return "hi"
+        return "format not supported, yet"
 
 
 # Formats:
