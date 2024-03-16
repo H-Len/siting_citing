@@ -32,6 +32,8 @@ def styleCitation():
     elif style == 'option3':
         return render_template('chicagoStyle.html', fname=fname, lname=lname, title=title, date=date)
     elif style == 'option4':
+        if len(title) >=10:
+            title = f"{title[:10]}..."
         return render_template('inlineMLA.html', lname=lname, fname=fname, title =title, date=date)
     else:
         return "hmmm, we can't support invisible red ink, yet"

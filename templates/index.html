@@ -22,9 +22,9 @@
         <br>
   
 
-        <form hx-post='/cite_style' hx-target="#cite_select" hx-swap="outerHTML">
+        <form hx-post='/cite_style' hx-target="#cite_select" hx-swap="innerHTML">
         
-        <form hx-target="cite_select" hx-swap="outerHTML">Please enter your name:
+        <form hx-target="#cite_select" hx-swap="innerHTML">Please enter your name:
             <br>
             <input type="radio" name="options" id="MLA" value="option1"> MLA </input><br>
             <input type="radio" name="options" id="APA" value="option2"> APA </input><br>
@@ -45,16 +45,5 @@
         <br>
         <br>
         <div id="cite_select">Click the format citation button to see the citation!</div>
-        <br>
-        <br>
-        <button
-        hx-get="/\" 
-        hx-refresh = True
-        hx-trigger="click"
-        hx-target="#cite_select"
-        hx-swap="outerHTML"
-        >
-            click to refresh and enter new info
-        </button>
     </body>
 </html>
