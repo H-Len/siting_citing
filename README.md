@@ -9,12 +9,9 @@
 
 ## The user will be able to choose the style and then the appropriate form will display for the user to fill out.
 ## After submitting the form, the new citation will display on the screen.
-## User has option to edit, updat, and delete entry.
-## Button will allow user to copy citation with formatting
-
 
 ## This project can be cloned at:
-
+https://github.com/H-Len/siting_citing
 
 #### 2024 - Hannah Melendy
 
