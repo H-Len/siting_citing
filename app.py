@@ -7,11 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/time')
-def timeNow():
-    currentTime = datetime.datetime.now()
-    return render_template('formatTime.html', currentTime=currentTime)
-
 @app.route('/name', methods=["POST"])
 def formatName():
     fname = request.form.get('fname')
@@ -37,23 +32,3 @@ def styleCitation():
         return render_template('inlineMLA.html', lname=lname, fname=fname, title =title, date=date)
     else:
         return "hmmm, we can't support invisible red ink, yet"
-
-# Formats:
-# MLA:
-    # Author's Last name, First name. "Title of Source." Title of Container, Other contributors, Version, Numbers, Publisher, Publication Date, Location.
-# APA:
-    # A basic reference list entry for a journal article in APA must include:
-    # Author or authors. ...
-    # Year of publication of the article (in round brackets).
-    # Article title.
-    # Journal title (in italics).
-    # Volume of journal (in italics).
-    # Issue number of journal in round brackets (no italics).
-    # Page range of article.
-    # DOI or URL.
-# Chicago:
-    # for a book, this is like MLA
-    # Chicago author-date format	
-    #   Author last name, first name. Year. Book Title: Subtitle. Place of publication: Publisher. Format.
-    # Chicago reference entry	
-    #   Murdoch, Iris. 2008. The Sea, the Sea. London: Vintage. Kindle.
