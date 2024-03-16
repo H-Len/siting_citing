@@ -15,31 +15,16 @@
         <form hx-put="/contact/1" hx-target="this" hx-swap="outerHTML">
            
           </form>
-        <div id="firstId">Click button for TIME info</div>
+        <div id="firstId">Click button above for TIME info</div>
+        <br>
+        <br>
+        <br>
+        <br>
+  
 
-        <button 
-        hx-get="/#compName"
-        hx-trigger="click"
-        hx-target="#compName"
-        >
-        </button>
-
-        <!-- //this is the line that works!!!: -->
-        <form hx-post='/name' hx-target="this" hx-swap="outerHTML">
-
-        <form id="#compName" hx-target="this" hx-swap="outerHTML">Please enter your name:
-            <label for="fname"></label>       
-            <input type="text" name="fname" value="">
-            <label for="lname"></label>
-            <input type="text" name="lname" value="">
+        <form hx-post='/cite_style' hx-target="#cite_select" hx-swap="outerHTML">
         
-            <button class='btn'>format name</button>
-        </form>
-        <div id="#compName">Click button to format name</div>
-        
-        <form hx-post='/cite_style' hx-target="this" hx-swap="outerHTML">
-        
-        <form id="cite_select" hx-target="this" hx-swap="outerHTML">Please enter your name:
+        <form hx-target="cite_select" hx-swap="outerHTML">Please enter your name:
             <br>
             <input type="radio" name="options" id="MLA" value="option1"> MLA </input><br>
             <input type="radio" name="options" id="APA" value="option2"> APA </input><br>
@@ -57,5 +42,19 @@
 
             <button class='btn'>format citation</button>
         </form>
+        <br>
+        <br>
+        <div id="cite_select">Click the format citation button to see the citation!</div>
+        <br>
+        <br>
+        <button
+        hx-get="/\" 
+        hx-refresh = True
+        hx-trigger="click"
+        hx-target="#cite_select"
+        hx-swap="outerHTML"
+        >
+            click to refresh and enter new info
+        </button>
     </body>
 </html>
